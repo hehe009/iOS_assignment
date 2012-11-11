@@ -135,6 +135,7 @@
 		4F104BF2164FB7130027A039 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F104BF1164FB7130027A039 /* IntroLayer.m */; };
 		4F104BF9164FB7830027A039 /* missile.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F104BF8164FB7830027A039 /* missile.png */; };
 		4F104BFF164FB8FB0027A039 /* Alien.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F104BFE164FB8FB0027A039 /* Alien.m */; };
+		4F104C1D164FE34E0027A039 /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F104C1C164FE34E0027A039 /* GameOverScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -404,6 +405,8 @@
 		4F104BFD164FB8FB0027A039 /* Alien.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Alien.h; path = ../Alien.h; sourceTree = "<group>"; };
 		4F104BFE164FB8FB0027A039 /* Alien.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Alien.m; path = ../Alien.m; sourceTree = "<group>"; };
 		4F104C0F164FDFD80027A039 /* GameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		4F104C1B164FE34E0027A039 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
+		4F104C1C164FE34E0027A039 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -462,6 +465,8 @@
 		4F104A72164FB7110027A039 /* Assign2-2011850711 */ = {
 			isa = PBXGroup;
 			children = (
+				4F104C1B164FE34E0027A039 /* GameOverScene.h */,
+				4F104C1C164FE34E0027A039 /* GameOverScene.m */,
 				4F104C0F164FDFD80027A039 /* GameConfig.h */,
 				4F104BFD164FB8FB0027A039 /* Alien.h */,
 				4F104BFE164FB8FB0027A039 /* Alien.m */,
@@ -1021,6 +1026,7 @@
 				4F104BEF164FB7130027A039 /* HelloWorldLayer.m in Sources */,
 				4F104BF2164FB7130027A039 /* IntroLayer.m in Sources */,
 				4F104BFF164FB8FB0027A039 /* Alien.m in Sources */,
+				4F104C1D164FE34E0027A039 /* GameOverScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

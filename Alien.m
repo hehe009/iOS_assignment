@@ -7,6 +7,7 @@
 //
 
 #import "Alien.h"
+#import "GameOverScene.h"
 
 @implementation Alien
 @synthesize mySprite, myLayer;
@@ -17,6 +18,9 @@
 // remove alien
 -(void) finishedmove {
     [self removeFromParentAndCleanup:YES];
+    GameOverScene *gameOverScene = [GameOverScene node];
+    [gameOverScene.layer.label setString:@"You Lose. Game over."];
+    [[CCDirector sharedDirector] replaceScene:gameOverScene];
 }
 
 // remove alien when being touch
