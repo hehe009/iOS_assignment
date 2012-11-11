@@ -18,6 +18,10 @@
 
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
+@synthesize timeLabel = _timeLabel;
+
+float timer = 0;
+NSString *strtimer = @"time elapsed: ";
 
 // Helper class method that creates a Scene with the HelloWorldLayer as the only child.
 +(CCScene *) scene
@@ -40,7 +44,15 @@
 {
     Alien *alien=[[Alien alloc] initWithLayer:self];
     [alien release];
-    
+}
+
+// update timer on screen
+-(void)updatetimer:(ccTime)dt
+{
+    timer += dt;
+    int mins = timer/60;
+    int secs = timer-(mins*60);
+    [_timeLabel setString: [NSString stringWithFormat:@"%@ %d:%02d",strtimer, mins,secs]];
     
 }
 
@@ -50,7 +62,22 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super initWithColor:ccc4(255, 255, 255, 255)])) {
+        
+        timer = 0;
+        
+        // Get the dimensions of the window for calculation purposes
+		CGSize winSize = [[CCDirector sharedDirector] winSize];
+        
+        self.timeLabel = [CCLabelTTF labelWithString: [NSString stringWithFormat:@"%@", strtimer] dimensions:CGSizeMake(120, 80) hAlignment:UITextAlignmentRight fontName:@"Marker Felt" fontSize:24];
+        _timeLabel.position = ccp(winSize.width - _timeLabel.contentSize.width/2, _timeLabel.contentSize.height/2);
+        _timeLabel.color = ccc3(0,0,0);
+        [self addChild:_timeLabel z:1];
+        
         [self schedule:@selector(capture) interval:1.0];
+        
+        // timer
+        [self schedule:@selector(updatetimer:) interval:1.0];
+
 	}
 	return self;
 }

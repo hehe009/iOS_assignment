@@ -15,8 +15,9 @@
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayerColor
 {
-    int counter;
+    CCLabelTTF *_timeLabel;
 }
+@property (nonatomic, assign) CCLabelTTF *timeLabel;
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
 +(CCScene *) scene;
