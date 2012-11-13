@@ -13,6 +13,7 @@
 
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
+#import "GameOverScene.h"
 
 #pragma mark - HelloWorldLayer
 
@@ -21,6 +22,7 @@
 @synthesize timeLabel = _timeLabel;
 
 float timer = 0;
+float spawninterval = 2.5;
 NSString *strtimer = @"time elapsed: ";
 
 // Helper class method that creates a Scene with the HelloWorldLayer as the only child.
@@ -40,10 +42,15 @@ NSString *strtimer = @"time elapsed: ";
 }
 
 // spawn aliens
--(void) capture
+-(void) spawnaliens:(ccTime)dt
 {
     Alien *alien=[[Alien alloc] initWithLayer:self];
     [alien release];
+    if (spawninterval > 0.4) {
+        spawninterval -= 0.03;
+        [self unschedule:@selector(spawnaliens:)];
+        [self schedule:@selector(spawnaliens:) interval:spawninterval];
+    }
 }
 
 // update timer on screen
@@ -53,6 +60,13 @@ NSString *strtimer = @"time elapsed: ";
     int mins = timer/60;
     int secs = timer-(mins*60);
     [_timeLabel setString: [NSString stringWithFormat:@"%@ %d:%02d",strtimer, mins,secs]];
+
+    // Time elapsed over 3 minutes, win the game
+    if(timer >= 180) {
+        GameOverScene *gameOverScene = [GameOverScene node];
+            [gameOverScene.layer.label setString:@"You win."];
+            [[CCDirector sharedDirector] replaceScene:gameOverScene];
+    }
     
 }
 
@@ -73,9 +87,9 @@ NSString *strtimer = @"time elapsed: ";
         _timeLabel.color = ccc3(0,0,0);
         [self addChild:_timeLabel z:1];
         
-        [self schedule:@selector(capture) interval:1.0];
-        
-        // timer
+        [self schedule:@selector(spawnaliens:) interval:spawninterval];
+
+        // set timer
         [self schedule:@selector(updatetimer:) interval:1.0];
 
 	}

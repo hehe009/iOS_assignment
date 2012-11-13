@@ -42,10 +42,14 @@
         _label.position = ccp(winSize.width/2, winSize.height/2);
         [self addChild:_label];
         
-        [self runAction:[CCSequence actions:
-                         [CCDelayTime actionWithDuration:3],
-                         [CCCallFunc actionWithTarget:self selector:@selector(gameOverDone)],
-                         nil]];
+        // 'Try Again' button
+        CCMenuItem *starMenuItem = [CCMenuItemImage
+                                    itemWithNormalImage:@"button_tryagain.png" selectedImage:@"button_tryagain.png"
+                                    target:self selector:@selector(gameOverDone)];
+        starMenuItem.position = ccp(winSize.width/2, winSize.height/2 - _label.scaleY - 60);
+        CCMenu *starMenu = [CCMenu menuWithItems:starMenuItem, nil];
+        starMenu.position = CGPointZero;
+        [self addChild:starMenu];
         
     }
     return self;

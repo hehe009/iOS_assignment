@@ -136,6 +136,8 @@
 		4F104BF9164FB7830027A039 /* missile.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F104BF8164FB7830027A039 /* missile.png */; };
 		4F104BFF164FB8FB0027A039 /* Alien.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F104BFE164FB8FB0027A039 /* Alien.m */; };
 		4F104C1D164FE34E0027A039 /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F104C1C164FE34E0027A039 /* GameOverScene.m */; };
+		4F8FD0B91652AA2B0047C4D7 /* button_tryagain.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8FD0B81652AA2B0047C4D7 /* button_tryagain.png */; };
+		4F8FD0BC1652ACFD0047C4D7 /* missile2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8FD0BB1652ACFD0047C4D7 /* missile2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -407,6 +409,8 @@
 		4F104C0F164FDFD80027A039 /* GameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		4F104C1B164FE34E0027A039 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
 		4F104C1C164FE34E0027A039 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
+		4F8FD0B81652AA2B0047C4D7 /* button_tryagain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_tryagain.png; sourceTree = "<group>"; };
+		4F8FD0BB1652ACFD0047C4D7 /* missile2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = missile2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -486,6 +490,8 @@
 		4F104A73164FB7110027A039 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4F8FD0BB1652ACFD0047C4D7 /* missile2.png */,
+				4F8FD0B81652AA2B0047C4D7 /* button_tryagain.png */,
 				4F104BF8164FB7830027A039 /* missile.png */,
 				4F104A74164FB7110027A039 /* Default.png */,
 				4F104A76164FB7110027A039 /* Default-Landscape~ipad.png */,
@@ -911,6 +917,8 @@
 				4F104A8C164FB7110027A039 /* iTunesArtwork in Resources */,
 				4F104BCA164FB7130027A039 /* ChangeLog in Resources */,
 				4F104BF9164FB7830027A039 /* missile.png in Resources */,
+				4F8FD0B91652AA2B0047C4D7 /* button_tryagain.png in Resources */,
+				4F8FD0BC1652ACFD0047C4D7 /* missile2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1130,6 +1138,7 @@
 				4F104BF7164FB7130027A039 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
