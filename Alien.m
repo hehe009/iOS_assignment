@@ -29,7 +29,7 @@
 }
 
 // init alien
--(id)initWithLayer:(HelloWorldLayer *)layer
+-(id)initWithLayer:(GamePlayLayer *)layer
 {
     self = [super init];
     if (self) {
@@ -37,7 +37,7 @@
         [layer addChild:self];
         
         
-        self.mySprite=[CCSprite spriteWithFile:@"missile.png"];
+        self.mySprite=[CCSprite spriteWithFile:@"alien.png"];
         
         // Determine where to spawn the alien along the X axis
         CGSize winSize = [[CCDirector sharedDirector] winSize];

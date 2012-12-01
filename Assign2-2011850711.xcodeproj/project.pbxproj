@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F080834166A4E5F00F7666C /* alien.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F080833166A4E5F00F7666C /* alien.png */; };
+		4F080845166A5DC800F7666C /* bg_main.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F080844166A5DC800F7666C /* bg_main.png */; };
 		4F104A61164FB7110027A039 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F104A60164FB7110027A039 /* QuartzCore.framework */; };
 		4F104A63164FB7110027A039 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F104A62164FB7110027A039 /* OpenGLES.framework */; };
 		4F104A65164FB7110027A039 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F104A64164FB7110027A039 /* OpenAL.framework */; };
@@ -131,16 +133,16 @@
 		4F104BE4164FB7130027A039 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F104BE3164FB7130027A039 /* vec4.c */; };
 		4F104BE9164FB7130027A039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F104BE8164FB7130027A039 /* main.m */; };
 		4F104BEC164FB7130027A039 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F104BEB164FB7130027A039 /* AppDelegate.m */; };
-		4F104BEF164FB7130027A039 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F104BEE164FB7130027A039 /* HelloWorldLayer.m */; };
+		4F104BEF164FB7130027A039 /* GamePlayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F104BEE164FB7130027A039 /* GamePlayLayer.m */; };
 		4F104BF2164FB7130027A039 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F104BF1164FB7130027A039 /* IntroLayer.m */; };
-		4F104BF9164FB7830027A039 /* missile.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F104BF8164FB7830027A039 /* missile.png */; };
 		4F104BFF164FB8FB0027A039 /* Alien.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F104BFE164FB8FB0027A039 /* Alien.m */; };
 		4F104C1D164FE34E0027A039 /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F104C1C164FE34E0027A039 /* GameOverScene.m */; };
 		4F8FD0B91652AA2B0047C4D7 /* button_tryagain.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8FD0B81652AA2B0047C4D7 /* button_tryagain.png */; };
-		4F8FD0BC1652ACFD0047C4D7 /* missile2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8FD0BB1652ACFD0047C4D7 /* missile2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F080833166A4E5F00F7666C /* alien.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alien.png; sourceTree = "<group>"; };
+		4F080844166A5DC800F7666C /* bg_main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_main.png; sourceTree = "<group>"; };
 		4F104A5C164FB7110027A039 /* Assign2-2011850711.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assign2-2011850711.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F104A60164FB7110027A039 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4F104A62164FB7110027A039 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -399,18 +401,16 @@
 		4F104BE8164FB7130027A039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F104BEA164FB7130027A039 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F104BEB164FB7130027A039 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4F104BED164FB7130027A039 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		4F104BEE164FB7130027A039 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
+		4F104BED164FB7130027A039 /* GamePlayLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamePlayLayer.h; sourceTree = "<group>"; };
+		4F104BEE164FB7130027A039 /* GamePlayLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamePlayLayer.m; sourceTree = "<group>"; };
 		4F104BF0164FB7130027A039 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		4F104BF1164FB7130027A039 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
-		4F104BF8164FB7830027A039 /* missile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = missile.png; sourceTree = "<group>"; };
 		4F104BFD164FB8FB0027A039 /* Alien.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Alien.h; path = ../Alien.h; sourceTree = "<group>"; };
 		4F104BFE164FB8FB0027A039 /* Alien.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Alien.m; path = ../Alien.m; sourceTree = "<group>"; };
 		4F104C0F164FDFD80027A039 /* GameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		4F104C1B164FE34E0027A039 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
 		4F104C1C164FE34E0027A039 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
 		4F8FD0B81652AA2B0047C4D7 /* button_tryagain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_tryagain.png; sourceTree = "<group>"; };
-		4F8FD0BB1652ACFD0047C4D7 /* missile2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = missile2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -476,8 +476,8 @@
 				4F104BFE164FB8FB0027A039 /* Alien.m */,
 				4F104BEA164FB7130027A039 /* AppDelegate.h */,
 				4F104BEB164FB7130027A039 /* AppDelegate.m */,
-				4F104BED164FB7130027A039 /* HelloWorldLayer.h */,
-				4F104BEE164FB7130027A039 /* HelloWorldLayer.m */,
+				4F104BED164FB7130027A039 /* GamePlayLayer.h */,
+				4F104BEE164FB7130027A039 /* GamePlayLayer.m */,
 				4F104BF0164FB7130027A039 /* IntroLayer.h */,
 				4F104BF1164FB7130027A039 /* IntroLayer.m */,
 				4F104A73164FB7110027A039 /* Resources */,
@@ -490,10 +490,10 @@
 		4F104A73164FB7110027A039 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4F8FD0BB1652ACFD0047C4D7 /* missile2.png */,
+				4F080833166A4E5F00F7666C /* alien.png */,
 				4F8FD0B81652AA2B0047C4D7 /* button_tryagain.png */,
-				4F104BF8164FB7830027A039 /* missile.png */,
 				4F104A74164FB7110027A039 /* Default.png */,
+				4F080844166A5DC800F7666C /* bg_main.png */,
 				4F104A76164FB7110027A039 /* Default-Landscape~ipad.png */,
 				4F104A78164FB7110027A039 /* fps_images.png */,
 				4F104A7A164FB7110027A039 /* fps_images-hd.png */,
@@ -916,9 +916,9 @@
 				4F104A89164FB7110027A039 /* Icon@2x.png in Resources */,
 				4F104A8C164FB7110027A039 /* iTunesArtwork in Resources */,
 				4F104BCA164FB7130027A039 /* ChangeLog in Resources */,
-				4F104BF9164FB7830027A039 /* missile.png in Resources */,
 				4F8FD0B91652AA2B0047C4D7 /* button_tryagain.png in Resources */,
-				4F8FD0BC1652ACFD0047C4D7 /* missile2.png in Resources */,
+				4F080834166A4E5F00F7666C /* alien.png in Resources */,
+				4F080845166A5DC800F7666C /* bg_main.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1031,7 +1031,7 @@
 				4F104BE4164FB7130027A039 /* vec4.c in Sources */,
 				4F104BE9164FB7130027A039 /* main.m in Sources */,
 				4F104BEC164FB7130027A039 /* AppDelegate.m in Sources */,
-				4F104BEF164FB7130027A039 /* HelloWorldLayer.m in Sources */,
+				4F104BEF164FB7130027A039 /* GamePlayLayer.m in Sources */,
 				4F104BF2164FB7130027A039 /* IntroLayer.m in Sources */,
 				4F104BFF164FB8FB0027A039 /* Alien.m in Sources */,
 				4F104C1D164FE34E0027A039 /* GameOverScene.m in Sources */,
@@ -1096,6 +1096,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1114,6 +1115,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

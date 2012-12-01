@@ -7,19 +7,19 @@
 //
 
 #import "cocos2d.h"
-#import "HelloWorldLayer.h"
+#import "GamePlayLayer.h"
 
 
 @interface Alien: CCNode <CCTargetedTouchDelegate> {
     CCSprite *mySprite;
-    HelloWorldLayer *myLayer;
+    GamePlayLayer *myLayer;
     int _minMoveDuration;
     int _maxMoveDuration;
 }
 @property (nonatomic, retain) CCSprite *mySprite;
-@property (nonatomic, retain) HelloWorldLayer *myLayer;
+@property (nonatomic, retain) GamePlayLayer *myLayer;
 @property (nonatomic, assign) int minMoveDuration;
 @property (nonatomic, assign) int maxMoveDuration;
 
--(id)initWithLayer:(HelloWorldLayer *)layer;
+-(id)initWithLayer:(GamePlayLayer *)layer;
 @end
