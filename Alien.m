@@ -45,6 +45,9 @@
         int maxX = winSize.width - mySprite.contentSize.width/2;
         int rangeX = maxX - minX;
         int actualX = (arc4random() % rangeX) + minX;
+        int minY = mySprite.contentSize.height/2;
+        int maxY = winSize.width - mySprite.contentSize.height/2;
+        int rangeY = maxY - minY;
        
         // spawn alien with the location calculated above
         mySprite.position=ccp(actualX, winSize.height + (mySprite.contentSize.height/2));
@@ -56,10 +59,19 @@
         int rangeDuration = maxDuration - minDuration;
         int actualDuration = (arc4random() % rangeDuration) + minDuration;
         
-        // define move
-        id move=[CCMoveTo actionWithDuration:actualDuration position: ccp(actualX, -mySprite.contentSize.height/2)];
+        
+        // form a path for the bezier curve movement
+        int controlPoint_2X = (arc4random() % rangeX) + minX;
+        int controlPoint_2Y = (arc4random() % rangeY) + minY;
+        int endPositionX = (arc4random() % rangeX) + minX;
+        ccBezierConfig bezier;
+        bezier.controlPoint_1 = ccp(actualX, winSize.height + (mySprite.contentSize.height/2)); // control point 1
+        bezier.controlPoint_2 =ccp(controlPoint_2X,controlPoint_2Y); // control point 2
+        bezier.endPosition = ccp(endPositionX, 0) ;
+        id bezierForward = [CCBezierTo actionWithDuration:actualDuration bezier:bezier];
+        
         id callback=[CCCallFunc actionWithTarget:self selector:@selector(finishedmove)];
-        [mySprite runAction:[CCSequence actions:move, callback, nil]];
+        [mySprite runAction:[CCSequence actions:bezierForward, callback, nil]];
         
     }
     
