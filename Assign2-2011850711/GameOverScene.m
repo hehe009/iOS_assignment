@@ -36,7 +36,14 @@
 {
     if( (self=[super initWithColor:ccc4(255,255,255,255)] )) {
         
+        // ask director for the window size
         CGSize winSize = [[CCDirector sharedDirector] winSize];
+        
+        // Add background image
+        CCSprite *background = [CCSprite spriteWithFile:@"bg_main.png"];
+        background.position = ccp(winSize.width/2, winSize.height/2);
+        [self addChild:background z:0];
+        
         self.label = [CCLabelTTF labelWithString:@"" fontName:@"Arial" fontSize:32];
         _label.color = ccc3(0,0,0);
         _label.position = ccp(winSize.width/2, winSize.height/2);
