@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F080834166A4E5F00F7666C /* alien.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F080833166A4E5F00F7666C /* alien.png */; };
 		4F080845166A5DC800F7666C /* bg_main.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F080844166A5DC800F7666C /* bg_main.png */; };
+		4F08084C166A76EB00F7666C /* WelcomeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F08084B166A76EB00F7666C /* WelcomeScene.m */; };
 		4F104A61164FB7110027A039 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F104A60164FB7110027A039 /* QuartzCore.framework */; };
 		4F104A63164FB7110027A039 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F104A62164FB7110027A039 /* OpenGLES.framework */; };
 		4F104A65164FB7110027A039 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F104A64164FB7110027A039 /* OpenAL.framework */; };
@@ -143,6 +144,8 @@
 /* Begin PBXFileReference section */
 		4F080833166A4E5F00F7666C /* alien.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alien.png; sourceTree = "<group>"; };
 		4F080844166A5DC800F7666C /* bg_main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_main.png; sourceTree = "<group>"; };
+		4F08084A166A76EB00F7666C /* WelcomeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeScene.h; sourceTree = "<group>"; };
+		4F08084B166A76EB00F7666C /* WelcomeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeScene.m; sourceTree = "<group>"; };
 		4F104A5C164FB7110027A039 /* Assign2-2011850711.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assign2-2011850711.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F104A60164FB7110027A039 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4F104A62164FB7110027A039 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -480,6 +483,8 @@
 				4F104BEE164FB7130027A039 /* GamePlayLayer.m */,
 				4F104BF0164FB7130027A039 /* IntroLayer.h */,
 				4F104BF1164FB7130027A039 /* IntroLayer.m */,
+				4F08084A166A76EB00F7666C /* WelcomeScene.h */,
+				4F08084B166A76EB00F7666C /* WelcomeScene.m */,
 				4F104A73164FB7110027A039 /* Resources */,
 				4F104A8D164FB7110027A039 /* libs */,
 				4F104BE6164FB7130027A039 /* Supporting Files */,
@@ -1035,6 +1040,7 @@
 				4F104BF2164FB7130027A039 /* IntroLayer.m in Sources */,
 				4F104BFF164FB8FB0027A039 /* Alien.m in Sources */,
 				4F104C1D164FE34E0027A039 /* GameOverScene.m in Sources */,
+				4F08084C166A76EB00F7666C /* WelcomeScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
