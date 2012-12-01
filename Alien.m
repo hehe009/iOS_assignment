@@ -67,7 +67,7 @@
         ccBezierConfig bezier;
         bezier.controlPoint_1 = ccp(actualX, winSize.height + (mySprite.contentSize.height/2)); // control point 1
         bezier.controlPoint_2 =ccp(controlPoint_2X,controlPoint_2Y); // control point 2
-        bezier.endPosition = ccp(endPositionX, 0) ;
+        bezier.endPosition = ccp(endPositionX, 50) ;
         id bezierForward = [CCBezierTo actionWithDuration:actualDuration bezier:bezier];
         
         id callback=[CCCallFunc actionWithTarget:self selector:@selector(finishedmove)];
