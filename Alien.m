@@ -8,6 +8,7 @@
 
 #import "Alien.h"
 #import "GameOverScene.h"
+#import "SimpleAudioEngine.h"
 
 @implementation Alien
 @synthesize mySprite, myLayer;
@@ -17,15 +18,28 @@
 
 // remove alien
 -(void) finishedmove {
+    
+    // play SE
+    [[SimpleAudioEngine sharedEngine] playEffect:@"SE_touchdown.mp3"];
+    
     [self removeFromParentAndCleanup:YES];
     GameOverScene *gameOverScene = [GameOverScene node];
     [gameOverScene.layer.label setString:@"You Lose \nGame over."];
     [[CCDirector sharedDirector] replaceScene:gameOverScene];
+    
+    // stop background music
+    [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
+    
+    // Start gameover background music
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"SE_gameover_bg.mp3"];
 }
 
 // remove alien when being touch
 -(void) removeMe {
     [self removeFromParentAndCleanup:YES];
+    
+    // play SE
+    [[SimpleAudioEngine sharedEngine] playEffect:@"SE_bazz.wav"];
 }
 
 // init alien

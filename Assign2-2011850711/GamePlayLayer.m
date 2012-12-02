@@ -10,10 +10,12 @@
 // Import the interfaces
 #import "GamePlayLayer.h"
 #import "Alien.h"
+#import "SimpleAudioEngine.h"
+#import "GameOverScene.h"
 
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
-#import "GameOverScene.h"
+
 
 #pragma mark - GamePlayLayer
 
@@ -63,8 +65,16 @@ NSString *strtimer = @"time elapsed: ";
 
     // Time elapsed over 3 minutes, win the game
     if(timer >= 180) {
+        
+        // stop background music
+        [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
+        
+        // play SE
+        [[SimpleAudioEngine sharedEngine] playEffect:@"SE_win.mp3"];
+        
+        // switch to gameoverscene
         GameOverScene *gameOverScene = [GameOverScene node];
-            [gameOverScene.layer.label setString:@"You win."];
+            [gameOverScene.layer.label setString:@"You stop the aliens \nthank you."];
             [[CCDirector sharedDirector] replaceScene:gameOverScene];
     }
     
@@ -76,6 +86,8 @@ NSString *strtimer = @"time elapsed: ";
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super initWithColor:ccc4(255, 255, 255, 255)])) {
+        
+        [[SimpleAudioEngine sharedEngine] playEffect:@"SE_teleport.wav"];
         
         timer = 0;
         

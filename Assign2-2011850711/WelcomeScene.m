@@ -9,6 +9,7 @@
 // Import the interfaces
 #import "WelcomeScene.h"
 #import "GamePlayLayer.h"
+#import "SimpleAudioEngine.h"
 
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
@@ -56,16 +57,27 @@
         starMenuItem.position = ccp(winSize.width/2, winSize.height/2 - 60);
         CCMenu *starMenu = [CCMenu menuWithItems:starMenuItem, nil];
         starMenu.position = CGPointZero;
+        
+        // preload button SE
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"SE_button.wav"];
+        
         [self addChild:starMenu];
+        
+        // Start up background music
+		[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"SE_title_bg.mp3"];
         
 	}
 	return self;
 }
 
+// start the game after button "Start" is pressed
 - (void)gameStart {
     
-    [[CCDirector sharedDirector] replaceScene:[GamePlayLayer scene]];
-    
+    // play SE when button press
+    [[SimpleAudioEngine sharedEngine] playEffect:@"SE_button.wav"];
+
+    // switch to GamePlayLayer
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[GamePlayLayer scene] withColor:ccWHITE]];
 }
 
 // on "dealloc" you need to release all your retained objects

@@ -8,6 +8,7 @@
 
 #import "GameOverScene.h"
 #import "GamePlayLayer.h"
+#import "SimpleAudioEngine.h"
 
 @implementation GameOverScene
 @synthesize layer = _layer;
@@ -56,15 +57,31 @@
         starMenuItem.position = ccp(winSize.width/2, winSize.height/2 - _label.scaleY - 60);
         CCMenu *starMenu = [CCMenu menuWithItems:starMenuItem, nil];
         starMenu.position = CGPointZero;
+        
+        // preload button SE
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"SE_button.wav"];
+        
         [self addChild:starMenu];
         
     }
     return self;
 }
 
+
+// start the game after button "Start" is pressed
 - (void)gameOverDone {
     
-    [[CCDirector sharedDirector] replaceScene:[GamePlayLayer scene]];
+    // play SE when button press
+    [[SimpleAudioEngine sharedEngine] playEffect:@"SE_button.wav"];
+    
+    // switch to GamePlayLayer
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[GamePlayLayer scene] withColor:ccWHITE]];
+    
+    // stop background music
+    [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
+    
+    // Start up the background music
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"SE_title_bg.mp3"];
     
 }
 
