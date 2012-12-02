@@ -139,6 +139,8 @@
 		4F104BFF164FB8FB0027A039 /* Alien.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F104BFE164FB8FB0027A039 /* Alien.m */; };
 		4F104C1D164FE34E0027A039 /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F104C1C164FE34E0027A039 /* GameOverScene.m */; };
 		4F8FD0B91652AA2B0047C4D7 /* button_tryagain.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8FD0B81652AA2B0047C4D7 /* button_tryagain.png */; };
+		4FB2984B166B4839002DFF49 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB2984A166B4839002DFF49 /* title.png */; };
+		4FB2984E166B4881002DFF49 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB2984D166B4881002DFF49 /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -414,6 +416,8 @@
 		4F104C1B164FE34E0027A039 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
 		4F104C1C164FE34E0027A039 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
 		4F8FD0B81652AA2B0047C4D7 /* button_tryagain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_tryagain.png; sourceTree = "<group>"; };
+		4FB2984A166B4839002DFF49 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
+		4FB2984D166B4881002DFF49 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,6 +443,7 @@
 		4F104A51164FB7110027A039 = {
 			isa = PBXGroup;
 			children = (
+				4FB2984D166B4881002DFF49 /* Default.png */,
 				4F104A72164FB7110027A039 /* Assign2-2011850711 */,
 				4F104A5F164FB7110027A039 /* Frameworks */,
 				4F104A5D164FB7110027A039 /* Products */,
@@ -496,6 +501,7 @@
 			isa = PBXGroup;
 			children = (
 				4F080833166A4E5F00F7666C /* alien.png */,
+				4FB2984A166B4839002DFF49 /* title.png */,
 				4F8FD0B81652AA2B0047C4D7 /* button_tryagain.png */,
 				4F104A74164FB7110027A039 /* Default.png */,
 				4F080844166A5DC800F7666C /* bg_main.png */,
@@ -924,6 +930,8 @@
 				4F8FD0B91652AA2B0047C4D7 /* button_tryagain.png in Resources */,
 				4F080834166A4E5F00F7666C /* alien.png in Resources */,
 				4F080845166A5DC800F7666C /* bg_main.png in Resources */,
+				4FB2984B166B4839002DFF49 /* title.png in Resources */,
+				4FB2984E166B4881002DFF49 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
