@@ -14,9 +14,7 @@
 // WelcomeLayer
 @interface WelcomeLayer : CCLayerColor
 {
-    CCLabelTTF *_label;
 }
-@property (nonatomic, assign) CCLabelTTF *label;
 
 // returns a CCScene that contains the WelcomeLayer as the only child
 +(CCScene *) scene;

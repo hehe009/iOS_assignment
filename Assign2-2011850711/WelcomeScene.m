@@ -17,7 +17,6 @@
 
 // WelcomeLayer implementation
 @implementation WelcomeLayer
-@synthesize label = _label;
 
 // Helper class method that creates a Scene with the WelcomeLayer as the only child.
 +(CCScene *) scene
@@ -49,17 +48,12 @@
         background.position = ccp(winSize.width/2, winSize.height/2);
         [self addChild:background z:0];
         
-        
-        self.label = [CCLabelTTF labelWithString:@"" fontName:@"Arial" fontSize:32];
-        _label.color = ccc3(0,0,0);
-        _label.position = ccp(winSize.width/2, winSize.height/2);
-        [self addChild:_label];
-        
-        // 'Try Again' button
+        // game start button
         CCMenuItem *starMenuItem = [CCMenuItemImage
-                                    itemWithNormalImage:@"button_start.png" selectedImage:@"button_start.png"
+                                    itemWithNormalImage:@"button_start.png" selectedImage:@"button_start_pressed.png"
                                     target:self selector:@selector(gameStart)];
-        starMenuItem.position = ccp(winSize.width/2, winSize.height/2 - _label.scaleY - 60);
+        
+        starMenuItem.position = ccp(winSize.width/2, winSize.height/2 - 60);
         CCMenu *starMenu = [CCMenu menuWithItems:starMenuItem, nil];
         starMenu.position = CGPointZero;
         [self addChild:starMenu];

@@ -144,6 +144,7 @@
 		4FB29871166B696D002DFF49 /* button_start.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB29870166B696D002DFF49 /* button_start.png */; };
 		4FB29873166B6B2F002DFF49 /* icon_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB29872166B6B2F002DFF49 /* icon_big.png */; };
 		4FB29875166B6B70002DFF49 /* icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB29874166B6B70002DFF49 /* icon_small.png */; };
+		4FB29877166B707A002DFF49 /* button_start_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB29876166B707A002DFF49 /* button_start_pressed.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -424,6 +425,7 @@
 		4FB29870166B696D002DFF49 /* button_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_start.png; sourceTree = "<group>"; };
 		4FB29872166B6B2F002DFF49 /* icon_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_big.png; sourceTree = "<group>"; };
 		4FB29874166B6B70002DFF49 /* icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_small.png; sourceTree = "<group>"; };
+		4FB29876166B707A002DFF49 /* button_start_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_start_pressed.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -507,6 +509,7 @@
 			children = (
 				4F080833166A4E5F00F7666C /* alien.png */,
 				4FB29870166B696D002DFF49 /* button_start.png */,
+				4FB29876166B707A002DFF49 /* button_start_pressed.png */,
 				4FB29853166B4F7F002DFF49 /* bg_title.png */,
 				4FB2984D166B4881002DFF49 /* Default.png */,
 				4FB29872166B6B2F002DFF49 /* icon_big.png */,
@@ -944,6 +947,7 @@
 				4FB29871166B696D002DFF49 /* button_start.png in Resources */,
 				4FB29873166B6B2F002DFF49 /* icon_big.png in Resources */,
 				4FB29875166B6B70002DFF49 /* icon_small.png in Resources */,
+				4FB29877166B707A002DFF49 /* button_start_pressed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
