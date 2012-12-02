@@ -19,7 +19,7 @@
 -(void) finishedmove {
     [self removeFromParentAndCleanup:YES];
     GameOverScene *gameOverScene = [GameOverScene node];
-    [gameOverScene.layer.label setString:@"You Lose. Game over."];
+    [gameOverScene.layer.label setString:@"You Lose \nGame over."];
     [[CCDirector sharedDirector] replaceScene:gameOverScene];
 }
 

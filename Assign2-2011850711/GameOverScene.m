@@ -45,13 +45,13 @@
         [self addChild:background z:0];
         
         self.label = [CCLabelTTF labelWithString:@"" fontName:@"Arial" fontSize:32];
-        _label.color = ccc3(0,0,0);
-        _label.position = ccp(winSize.width/2, winSize.height/2);
+        _label.color = ccc3(255,255,255);
+        _label.position = ccp(winSize.width/2, winSize.height/2 + 80);
         [self addChild:_label];
         
         // 'Try Again' button
         CCMenuItem *starMenuItem = [CCMenuItemImage
-                                    itemWithNormalImage:@"button_tryagain.png" selectedImage:@"button_tryagain.png"
+                                    itemWithNormalImage:@"button_tryagain.png" selectedImage:@"button_tryagain_pressed.png"
                                     target:self selector:@selector(gameOverDone)];
         starMenuItem.position = ccp(winSize.width/2, winSize.height/2 - _label.scaleY - 60);
         CCMenu *starMenu = [CCMenu menuWithItems:starMenuItem, nil];
