@@ -57,7 +57,7 @@
         
         // 'Try Again' button
         CCMenuItem *starMenuItem = [CCMenuItemImage
-                                    itemWithNormalImage:@"button_tryagain.png" selectedImage:@"button_tryagain.png"
+                                    itemWithNormalImage:@"button_start.png" selectedImage:@"button_start.png"
                                     target:self selector:@selector(gameStart)];
         starMenuItem.position = ccp(winSize.width/2, winSize.height/2 - _label.scaleY - 60);
         CCMenu *starMenu = [CCMenu menuWithItems:starMenuItem, nil];
