@@ -73,9 +73,7 @@ NSString *strtimer = @"time elapsed: ";
         [[SimpleAudioEngine sharedEngine] playEffect:@"SE_win.mp3"];
         
         // switch to gameoverscene
-        GameOverScene *gameOverScene = [GameOverScene node];
-            [gameOverScene.layer.label setString:@"You stop the aliens \nthank you."];
-            [[CCDirector sharedDirector] replaceScene:gameOverScene];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[GameOverLayer scene] withColor:ccWHITE]];
     }
     
 }

@@ -6,16 +6,19 @@
 //
 //
 
+#import <GameKit/GameKit.h>
+
+// When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
 
-@interface GameOverLayer : CCLayerColor {
+// GameOverLayer
+@interface GameOverLayer : CCLayerColor
+{
     CCLabelTTF *_label;
 }
-@property (nonatomic, retain) CCLabelTTF *label;
-@end
+@property (nonatomic, assign) CCLabelTTF *label;
 
-@interface GameOverScene : CCScene {
-    GameOverLayer *_layer;
-}
-@property (nonatomic, retain) GameOverLayer *layer;
+// returns a CCScene that contains the GameOverLayer as the only child
++(CCScene *) scene;
+
 @end

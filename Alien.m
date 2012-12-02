@@ -23,9 +23,9 @@
     [[SimpleAudioEngine sharedEngine] playEffect:@"SE_touchdown.mp3"];
     
     [self removeFromParentAndCleanup:YES];
-    GameOverScene *gameOverScene = [GameOverScene node];
-    [gameOverScene.layer.label setString:@"You Lose \nGame over."];
-    [[CCDirector sharedDirector] replaceScene:gameOverScene];
+    GameOverLayer *gameOverLayer = [GameOverLayer node];
+    [gameOverLayer.label setString:@"You Lose \nGame over."];
+    [[CCDirector sharedDirector] replaceScene:gameOverLayer];
     
     // stop background music
     [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];

@@ -6,46 +6,45 @@
 //
 //
 
+// Import the interfaces
 #import "GameOverScene.h"
-#import "GamePlayLayer.h"
+#import "Alien.h"
 #import "SimpleAudioEngine.h"
-
-@implementation GameOverScene
-@synthesize layer = _layer;
-
-- (id)init {
-    
-    if ((self = [super init])) {
-        self.layer = [GameOverLayer node];
-        [self addChild:_layer];
-    }
-    return self;
-}
-
-- (void)dealloc {
-    [_layer release];
-    _layer = nil;
-    [super dealloc];
-}
-
-@end
 
 @implementation GameOverLayer
 @synthesize label = _label;
 
+// Helper class method that creates a Scene with the GameOverLayer as the only child.
++(CCScene *) scene
+{
+	// 'scene' is an autorelease object.
+	CCScene *scene = [CCScene node];
+	
+	// 'layer' is an autorelease object.
+	GameOverLayer *layer = [GameOverLayer node];
+	
+	// add layer as a child to scene
+	[scene addChild: layer];
+	
+	// return the scene
+	return scene;
+}
+
+// on "init" you need to initialize your instance
 -(id) init
 {
-    if( (self=[super initWithColor:ccc4(255,255,255,255)] )) {
+	// always call "super" init
+	// Apple recommends to re-assign "self" with the "super's" return value
+	if( (self=[super initWithColor:ccc4(255, 255, 255, 255)])) {
         
         // ask director for the window size
-        CGSize winSize = [[CCDirector sharedDirector] winSize];
+		CGSize winSize = [[CCDirector sharedDirector] winSize];
         
-        // Add background image
         CCSprite *background = [CCSprite spriteWithFile:@"bg_main.png"];
         background.position = ccp(winSize.width/2, winSize.height/2);
         [self addChild:background z:0];
         
-        self.label = [CCLabelTTF labelWithString:@"" fontName:@"Arial" fontSize:32];
+        self.label = [CCLabelTTF labelWithString:@"You stop those aliens\nThank you!" fontName:@"Arial" fontSize:32];
         _label.color = ccc3(255,255,255);
         _label.position = ccp(winSize.width/2, winSize.height/2 + 80);
         [self addChild:_label];
@@ -64,9 +63,8 @@
         [self addChild:starMenu];
         
     }
-    return self;
+	return self;
 }
-
 
 // start the game after button "Start" is pressed
 - (void)gameOverDone {
@@ -85,10 +83,15 @@
     
 }
 
-- (void)dealloc {
-    [_label release];
-    _label = nil;
-    [super dealloc];
+// on "dealloc" you need to release all your retained objects
+- (void) dealloc
+{
+	// in case you have something to dealloc, do it in this method
+	// in this particular example nothing needs to be released.
+	// cocos2d will automatically release all the children (Label)
+	
+	// don't forget to call "super dealloc"
+	[super dealloc];
 }
 
 @end
