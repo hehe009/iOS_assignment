@@ -54,8 +54,8 @@
         [self addChild:mySprite];
         
         // Determine speed of the alien
-        int minDuration = 6;
-        int maxDuration = 8;
+        int minDuration = 4;
+        int maxDuration = 6;
         int rangeDuration = maxDuration - minDuration;
         int actualDuration = (arc4random() % rangeDuration) + minDuration;
         
